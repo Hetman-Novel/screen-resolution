@@ -22,8 +22,21 @@
 		</main>
 	</div>
 	<script>
-		document.getElementById("width").innerHTML = screen.width;
-		document.getElementById("height").innerHTML = screen.height;
+		const width = screen.width;
+		const height = screen.height;
+		document.getElementById("width").innerHTML = width;
+		document.getElementById("height").innerHTML = height;
+		var mql = window.matchMedia("(orientation: portrait)");
+		mql.addListener(function(m) {
+		    if(m.matches) {
+				document.getElementById("width").innerHTML = height;
+		        document.getElementById("height").innerHTML = width;
+				
+		    } else {
+		        document.getElementById("width").innerHTML = width;
+		        document.getElementById("height").innerHTML = height;
+		    }
+		});
 	</script>
 </body>
 </html>
