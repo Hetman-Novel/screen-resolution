@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Screen resolution</title>
+	<link rel="icon" href="favicon.svg">
+	<style>
+		*,::after,::before{-webkit-box-sizing:border-box;box-sizing:border-box;border:0;margin:0;padding:0}.wrapper{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:100vh;padding-left:15px;padding-right:15px}h1{color:#222;font-family:Arial,Helvetica,sans-serif;font-size:60px;max-width:560px;text-align:center}h1 .on,h1 .px{bottom:6px;position:relative}h1 .number{color:green}@media (max-width:1140px){h1{font-size:calc(28px + 32 * ((100vw - 320px)/ 820))}h1{max-width:calc(260px + 300 * ((100vw - 320px)/ 820))}h1 .on,h1 .px{bottom:calc(2px + 4 * ((100vw - 320px)/ 820))}}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<main class="main">
+			<h1>Screen resolution:
+				<span id="width" class="number">0</span>
+				<span class="on">on</span>
+				<span id="height" class="number">0</span>
+				<span class="px">px</span>
+			</h1>
+		</main>
+	</div>
+	<script>
+		document.getElementById("width").innerHTML = screen.width;
+		document.getElementById("height").innerHTML = screen.height;
+	</script>
+</body>
+</html>
